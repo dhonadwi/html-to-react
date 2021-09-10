@@ -3,7 +3,35 @@ import Fade from "react-reveal/Fade";
 import Section from "elements/Section";
 import Header from "parts/Header";
 import HeroImage from "assets/images/hero-image.png";
+import Client from "parts/Client";
+import Feature from "parts/Feature";
+import FeatureIcon01 from "assets/images/feature-tile-icon-01.svg";
+import FeatureIcon02 from "assets/images/feature-tile-icon-02.svg";
+import FeatureIcon03 from "assets/images/feature-tile-icon-03.svg";
 export default function Homepage() {
+  const features = [
+    {
+      imgSrc: FeatureIcon01,
+      imgAlt: "Feature Icon 01",
+      title: "Join BWA",
+      description:
+        "A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.",
+    },
+    {
+      imgSrc: FeatureIcon02,
+      imgAlt: "Feature Icon 02",
+      title: "Join BWA",
+      description:
+        "A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.",
+    },
+    {
+      imgSrc: FeatureIcon03,
+      imgAlt: "Feature Icon 03",
+      title: "Join BWA",
+      description:
+        "A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.",
+    },
+  ];
   return (
     <div className="body-wrap">
       <Header></Header>
@@ -35,6 +63,22 @@ export default function Homepage() {
                     height="504"
                   />
                 </Fade>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Client></Client>
+        <Section className="features-tiles">
+          <div className="container">
+            <div className="features-tiles-inner section-inner">
+              <div className="tiles-wrap">
+                {features.map((feature, index) => (
+                  <Feature
+                    key={index}
+                    delayInMS={index * 500}
+                    data={feature}
+                  ></Feature>
+                ))}
               </div>
             </div>
           </div>
