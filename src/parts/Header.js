@@ -32,7 +32,7 @@ export default function Header(props) {
             <ul
               className="list-reset text-xxs header-nav-right"
             >
-              <li><Link to='#'>Home</Link></li>
+              <li><Link to='#home'>Home</Link></li>
               <li><Link to="#">Features</Link></li>
               <li><Link to="#">Pricing</Link></li>
               <li><Link to="#">Showcase</Link></li>
